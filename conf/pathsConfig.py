@@ -2,7 +2,7 @@
 Author: frostysdw
 Date: 2025-01-13 08:34:55
 LastEditors: frostysdw
-LastEditTime: 2025-01-14 15:22:48
+LastEditTime: 2025-01-14 19:59:37
 FilePath: \ApiAuto\conf\pathsConfig.py
 Description: 
 '''
@@ -24,8 +24,16 @@ logs_path = os.path.join(base_path, 'result', 'logs')
 report_json_path = os.path.join(base_path, 'result', 'reports', 'json')
 # 报告日志文件路径-html
 report_html_path = os.path.join(base_path, 'result', 'reports', 'html')
-# 测试用例
-case_path = os.path.join(base_path,'tests/login')
+# 测试用例路径
+coupon_case_path = os.path.join(base_path,'tests', 'coupon')
+login_case_path = os.path.join(base_path,'tests', 'login')
+# 构建pytest命令行参数列表
+pytest_args = [
+    coupon_case_path,  # 第一个测试目录
+    login_case_path,   # 第二个测试目录
+    "-svx",            # -s: 输出捕获的stdout/stderr; -v: 详细模式; -x: 遇到第一个失败立即退出
+    "--alluredir", report_json_path  # 指定Allure报告输出目录
+]
 
 
 if __name__ == '__main__':
