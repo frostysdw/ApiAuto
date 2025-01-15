@@ -14,7 +14,7 @@ import allure
 import pytest
 
 from api.couponAPI import CouponAPI
-from src.ConnectMysql import connect_mysql
+from core.ConnectMysql import connect_mysql
 from core.GetData import get_coupon_save_data, get_coupon_receive_data
 
 

@@ -9,7 +9,7 @@ Description:
 
 
 import json
-from src.LRequest import Lrequest
+from core.LRequest import Lrequest
 
 
 class LoginAPI(Lrequest):

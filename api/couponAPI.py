@@ -8,7 +8,7 @@ Description:
 '''
 
 
-from src.LRequest import Lrequest
+from core.LRequest import Lrequest
 
 
 class CouponAPI(Lrequest):
